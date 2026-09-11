@@ -1,8 +1,9 @@
 # Unpublished GitHub Release draft
 
-Title: Conway–Soifer n = 3 — Lean formalization
+Title: The Conway–Soifer conjecture for n = 3: a Lean formalization
 
-This standalone package formalizes the following statement: ten congruent closed
+This standalone package proves the n = 3 case of the Conway–Soifer covering
+conjecture. The formal statement is: ten congruent closed
 equilateral triangles covering an equilateral triangle of side three have common
 side at least one, with arbitrary translations, rotations and overlaps. It also
 proves the corresponding impossibility for ten unit triangles and target side
@@ -16,14 +17,14 @@ verification evidence for actual build outcomes.
 Sources, build instructions and audit:
 https://github.com/AnanasClassic/conway-soifer-n3-lean
 
-Before publication: confirm authorship and license, choose an actual version and
+Before publication: choose an actual version and
 tag, and attach the successful CI link for that exact revision. This draft does
 not assert peer review or independent validation.
 
 # Unpublished Zenodo description draft
 
-This software artifact contains a standalone Lean 4 formalization of the n = 3
-Conway–Soifer equilateral-triangle covering statement. If ten closed equilateral
+This software artifact contains a standalone Lean 4 proof of the n = 3
+case of the Conway–Soifer equilateral-triangle covering conjecture. If ten closed equilateral
 triangles of a common side r cover an equilateral triangle of side three, then
 r ≥ 1; no restrictions are imposed on their translations, rotations or overlaps.
 A scaling corollary excludes covers of a triangle of side 3 + ε by ten unit
@@ -38,14 +39,17 @@ reproduction results and does not claim independent or peer-reviewed validation.
 
 Source: https://github.com/AnanasClassic/conway-soifer-n3-lean
 
-Before deposition: confirm creators and license; select the actual release
+Creator: Vladislav Kuznetsov (Moscow Institute of Physics and Technology).
+License: MIT.
+
+Before deposition: select the actual release
 archive; include the verification report for that version. No DOI is assigned
 in this draft.
 
 # Unpublished Lean Zulip announcement draft
 
-I would appreciate feedback on a Lean 4 formalization of the n = 3 Conway–Soifer
-covering problem:
+I would appreciate feedback on a kernel-checked Lean 4 proof of the n = 3 case of the
+Conway–Soifer covering conjecture:
 https://github.com/AnanasClassic/conway-soifer-n3-lean
 
 The public statement says that ten congruent closed equilateral triangles

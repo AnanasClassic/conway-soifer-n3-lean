@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use this formalization or build upon it,
+  please cite this repository using the metadata below.
+type: software
+title: "The Conway–Soifer conjecture for n = 3: a Lean formalization"
+authors:
+  - family-names: "Kuznetsov"
+    given-names: "Vladislav"
+    affiliation: "Moscow Institute of Physics and Technology"
+repository-code: "https://github.com/AnanasClassic/conway-soifer-n3-lean"
+url: "https://github.com/AnanasClassic/conway-soifer-n3-lean"
+abstract: >-
+  A standalone, kernel-checked Lean 4 proof of the n = 3 case
+  of the Conway–Soifer covering conjecture: for every epsilon > 0,
+  an equilateral triangle of side 3 + epsilon cannot be covered
+  by ten closed unit equilateral triangles, with arbitrary
+  positions, rotations, and overlaps. Equivalently, ten congruent
+  closed equilateral triangles covering an equilateral triangle
+  of side 3 must have common side length at least 1.
+  The formalization includes 100 certificates and 3188 forced
+  point-to-owner assignments. The final theorems depend only on
+  the standard axioms propext, Classical.choice, and Quot.sound.
+keywords:
+  - Lean 4
+  - formal verification
+  - discrete geometry
+  - covering problems
+  - equilateral triangles
+  - Conway–Soifer conjecture
+license: MIT

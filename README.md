@@ -1,6 +1,9 @@
-# Conway–Soifer: the case n = 3 in Lean
+# The Conway–Soifer conjecture for n = 3: a Lean formalization
 
 [![Lean formalization](https://github.com/AnanasClassic/conway-soifer-n3-lean/actions/workflows/lean.yml/badge.svg)](https://github.com/AnanasClassic/conway-soifer-n3-lean/actions/workflows/lean.yml)
+
+This repository proves the **n = 3 case of the Conway–Soifer covering conjecture**
+with a standalone, kernel-checked Lean 4 formalization.
 
 If an equilateral triangle of side **3** is covered by **ten closed equilateral
 triangles with a common side r**, then **r ≥ 1**. Positions, rotations and overlaps
@@ -150,8 +153,10 @@ published with this package. Reproduction during packaging and automated CI are
 reported as such, not as independent review. Release, Zenodo and Lean Zulip texts
 are [unpublished drafts](docs/RELEASE_DRAFT.md).
 
-See [provenance and licensing status](PROVENANCE.md). No project license has been
-chosen: publication permission is not a substitute for a reuse license. The
-repository owner must confirm licensing and citation authorship before a release.
-An explicitly inactive [citation template](docs/CITATION.cff.template) is provided;
-there is no invented DOI, author list, affiliation or release date.
+Author: **Vladislav Kuznetsov**, Moscow Institute of Physics and Technology.
+
+The formalization and accompanying documentation are available under the
+[MIT License](LICENSE). See [provenance](PROVENANCE.md) for the source history,
+borrowed files and dependency licensing. Citation metadata is provided in
+[CITATION.cff](CITATION.cff); release-specific version, date and DOI will be added
+when assigned.

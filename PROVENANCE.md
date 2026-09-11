@@ -9,11 +9,11 @@ all necessary base-branch files. The source repository is private; its availabil
 is not needed to build or understand the public theorem. No source Git history
 was imported.
 
-The source commit records the author name **Vlad**, and the repository owner is
-**AnanasClassic**. This records verifiable repository metadata, not an inferred
-complete author list. The packaging, documentation and small public wrappers were
-prepared with Codex at the owner's request. Full citation authorship, ordering and
-a reuse license require owner confirmation.
+The author is **Vladislav Kuznetsov** (GitHub: **AnanasClassic**), affiliated
+with the **Moscow Institute of Physics and Technology**. The source commit
+records the author name **Vlad**. Citation metadata is in [CITATION.cff](CITATION.cff).
+The packaging, documentation and small public wrappers were prepared with Codex
+at the owner's request.
 
 The five files under `SevenTriangles/Geometry/` are verbatim copies from
 `AnanasClassic/seven_triangles_unit_hexagon`, commit
@@ -23,13 +23,12 @@ The five files under `SevenTriangles/Geometry/` are verbatim copies from
 file's paths were adjusted to this repository's root. The coordinate transfer is
 proved in `ConwaySoifer/Geometry/Oblique.lean`.
 
-No LICENSE, COPYING or NOTICE file was found in the selected source tree or in
-the borrowed project's tree at its recorded revision. No existing license grant
-is inferred and no new license is assigned. Existing in-file comments and
-provenance are preserved. Mathlib and other downloaded dependencies retain their
-own upstream licenses; they are not vendored in this repository. The owner has
-authorized public distribution of this formalization package. A general reuse
-license remains to be selected by the rights holder.
+The owner has approved the [MIT License](LICENSE) for this published package,
+including the retained files from the owner's SevenTriangles project. Existing
+in-file comments and provenance are preserved. No LICENSE, COPYING or NOTICE
+file was present in the selected source trees at their recorded revisions; the
+MIT grant applies to this published package. Mathlib and other downloaded
+dependencies retain their own upstream licenses and are not vendored here.
 
 ## Extraction changes
 
