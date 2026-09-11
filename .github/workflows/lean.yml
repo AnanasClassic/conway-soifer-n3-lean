@@ -1,0 +1,101 @@
+name: Lean formalization
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: lean-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  certificates:
+    name: Certificates ${{ matrix.shard }} / 10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install pinned toolchain manager
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan/toolchains
+            ~/.cache/mathlib
+            .lake/packages
+          key: cs3-public-deps-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+      - name: Download pinned mathlib cache
+        run: lake exe cache get
+      - name: Build and verify this certificate partition
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/verify.py --certificates-only --shard-count 10 --shard-index ${{ matrix.shard }} 2>&1 | tee certificate-build.log
+      - name: Pack checked modules and Lake dependency traces
+        run: tar -czf certificates-${{ matrix.shard }}.tar.gz .lake/build
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: checked-certificates-${{ matrix.shard }}
+          path: certificates-${{ matrix.shard }}.tar.gz
+          compression-level: 0
+          if-no-files-found: error
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: certificate-logs-${{ matrix.shard }}
+          include-hidden-files: true
+          path: |
+            certificate-build.log
+            .lake/kernel-logs/
+            verification/
+  lean:
+    name: Assemble public theorems and audit
+    needs: certificates
+    runs-on: ubuntu-24.04
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install pinned toolchain manager
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan/toolchains
+            ~/.cache/mathlib
+            .lake/packages
+          key: cs3-public-deps-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+      - name: Download pinned mathlib cache
+        run: lake exe cache get
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: checked-certificates-*
+          path: certificate-artifacts
+          merge-multiple: true
+      - name: Restore all ten successful parts
+        shell: bash
+        run: |
+          archives=(certificate-artifacts/certificates-*.tar.gz)
+          test "${#archives[@]}" -eq 10
+          for archive in "${archives[@]}"; do
+            tar -xzf "$archive"
+          done
+      - name: Build formal modules and inspect dependencies
+        shell: bash
+        run: |
+          set -o pipefail
+          python3 tools/verify.py --jobs 1
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: lean-build-and-audit
+          path: |
+            verification/
+            lake-manifest.json

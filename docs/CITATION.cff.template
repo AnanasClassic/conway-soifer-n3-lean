@@ -1,0 +1,12 @@
+# INACTIVE TEMPLATE: confirm the complete author list and license before renaming
+# this file to CITATION.cff. Do not treat placeholders as citation metadata.
+cff-version: 1.2.0
+message: "Please cite this software using the confirmed metadata."
+type: software
+title: "Conway–Soifer: the case n = 3 in Lean"
+repository-code: "https://github.com/AnanasClassic/conway-soifer-n3-lean"
+abstract: "Lean 4 formalization that ten congruent closed equilateral triangles covering an equilateral triangle of side three have common side at least one."
+# authors: OWNER MUST SUPPLY AND CONFIRM THE COMPLETE LIST AND ORDER.
+# license: OWNER MUST SELECT A LICENSE WITH THE REQUIRED RIGHTS.
+# Add version/date-released only when an actual release exists.
+# Add identifiers only after an actual identifier has been assigned.

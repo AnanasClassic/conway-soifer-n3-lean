@@ -1,0 +1,6 @@
+.lake/
+__pycache__/
+*.pyc
+verification/
+certificate-artifacts/
+certificates-*.tar.gz

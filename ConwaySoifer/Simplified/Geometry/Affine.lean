@@ -1,0 +1,47 @@
+import ConwaySoifer.Geometry.Symmetry
+
+set_option autoImplicit false
+noncomputable section
+namespace ConwaySoifer
+
+/-- Transport a filled equilateral triangle by an affine distance-preserving map. -/
+def EquilateralTriangle.mapAffineIso (T : EquilateralTriangle) (f : Point →ᵃ[ℝ] Point)
+    (hf : ∀ p q, sqDist (f p) (f q) = sqDist p q) : EquilateralTriangle where
+  vertices := fun i => f (T.vertices i)
+  side := T.side
+  side_nonneg := T.side_nonneg
+  equilateral := fun i j hij => by rw [hf]; exact T.equilateral i j hij
+
+theorem EquilateralTriangle.carrier_mapAffineIso (T : EquilateralTriangle)
+    (f : Point →ᵃ[ℝ] Point) (hf : ∀ p q, sqDist (f p) (f q) = sqDist p q) :
+    (T.mapAffineIso f hf).carrier = f '' T.carrier := by
+  change convexHull ℝ (Set.range (f ∘ T.vertices)) = f '' convexHull ℝ (Set.range T.vertices)
+  rw [Set.range_comp, AffineMap.image_convexHull]
+
+theorem EquilateralTriangle.mem_mapAffineIso (T : EquilateralTriangle)
+    (f : Point →ᵃ[ℝ] Point) (hf : ∀ p q, sqDist (f p) (f q) = sqDist p q)
+    {p : Point} (hp : p ∈ T.carrier) : f p ∈ (T.mapAffineIso f hf).carrier := by
+  rw [T.carrier_mapAffineIso f hf]
+  exact Set.mem_image_of_mem f hp
+
+namespace Simplified
+
+def receiverLinear : Point →ₗ[ℝ] Point where
+  toFun p := (-p.1, p.1 + p.2)
+  map_add' p q := by ext <;> simp <;> ring
+  map_smul' a p := by ext <;> simp <;> ring
+
+def receiverCoordinates (s : ℝ) : Point →ᵃ[ℝ] Point :=
+  receiverLinear.toAffineMap + AffineMap.const ℝ Point (1, s - 1)
+
+theorem receiverCoordinates_apply (s : ℝ) (p : Point) :
+    receiverCoordinates s p = (1 - p.1, p.1 + p.2 + s - 1) := by
+  ext <;> simp [receiverCoordinates, receiverLinear] <;> ring
+
+theorem receiverCoordinates_isometry (s : ℝ) (p q : Point) :
+    sqDist (receiverCoordinates s p) (receiverCoordinates s q) = sqDist p q := by
+  rw [receiverCoordinates_apply, receiverCoordinates_apply]
+  simp [sqDist]; ring
+
+end Simplified
+end ConwaySoifer
