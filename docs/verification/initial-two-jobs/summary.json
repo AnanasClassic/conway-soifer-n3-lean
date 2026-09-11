@@ -1,0 +1,10 @@
+{
+  "exit_code": 130,
+  "elapsed_seconds": 337.83484687500004,
+  "max_child_rss_bytes": 4873224192,
+  "child_user_seconds": 562.805746,
+  "child_system_seconds": 87.192311,
+  "source_sha256": "90445f36cf36eff39045c2c6c1cf6845a4fa9fc8532373af1f4f5c6b77a5e869",
+  "platform": "Darwin-25.2.0-arm64-arm-64bit-Mach-O",
+  "finished_utc": "2026-09-11T06:52:41.185071+00:00"
+}

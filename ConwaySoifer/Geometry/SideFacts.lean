@@ -7,7 +7,6 @@ set_option maxHeartbeats 1600000
 noncomputable section
 open MeasureTheory
 namespace ConwaySoifer
-open Certificates
 variable {c : ContactCase} {T : Configuration} {r s : ℝ}
 
 /-! ### The receiver -/

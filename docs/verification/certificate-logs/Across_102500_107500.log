@@ -1,0 +1,120 @@
+⚠ [3095/3102] Replayed ConwaySoifer.Geometry.Support
+warning: ConwaySoifer/Geometry/Support.lean:38:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:46:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:50:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:54:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:68:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:323:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:326:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:329:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:565:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3097/3102] Replayed ConwaySoifer.Certificates.CheckerSound
+warning: ConwaySoifer/Certificates/CheckerSound.lean:670:33: This simp argument is unused:
+  hord
+
+Hint: Omit it from the simp argument list.
+  simp [ordinaryCheck,̵ ̵h̵o̵r̵d̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3100/3102] Built ConwaySoifer.Simplified.Certificates.Data.Across_102500_107500 (2.1s)
+✔ [3101/3102] Built ConwaySoifer.Simplified.Certificates.Checkpoints.Across_102500_107500 (2.7s)
+✔ [3102/3102] Built ConwaySoifer.Simplified.Certificates.Steps.Across_102500_107500_0 (15s)
+Build completed successfully (3102 jobs).
+⚠ [3096/3103] Replayed ConwaySoifer.Geometry.Support
+warning: ConwaySoifer/Geometry/Support.lean:38:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:46:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:50:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:54:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:68:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:323:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:326:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:329:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:565:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3098/3103] Replayed ConwaySoifer.Certificates.CheckerSound
+warning: ConwaySoifer/Certificates/CheckerSound.lean:670:33: This simp argument is unused:
+  hord
+
+Hint: Omit it from the simp argument list.
+  simp [ordinaryCheck,̵ ̵h̵o̵r̵d̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3103/3103] Built ConwaySoifer.Simplified.Certificates.Checked.Across_102500_107500 (5.2s)
+Build completed successfully (3103 jobs).

@@ -1,0 +1,13 @@
+{
+  "initial_source_sha256": "90445f36cf36eff39045c2c6c1cf6845a4fa9fc8532373af1f4f5c6b77a5e869",
+  "corrected_source_sha256": "1e1703b41ae90d2c61e61b5f6b3c961b79637cd29ff54441bb67af4692df8b07",
+  "time_utc": "2026-09-11T07:14:00.304695+00:00",
+  "changed_files": [
+    "ConwaySoifer/Geometry/AownFacts.lean",
+    "ConwaySoifer/Geometry/AcrossFacts.lean",
+    "ConwaySoifer/Geometry/SideFacts.lean"
+  ],
+  "change": "Remove unused open Certificates commands after removal of the obsolete imported namespace; no proof body or theorem statement changed.",
+  "focused_failure_log": "side-facts.log",
+  "focused_success_log": "side-facts-fixed.log"
+}

@@ -61,15 +61,15 @@
       "path": "ConwaySoifer/Geometry/AcrossFacts.lean",
       "source_path": "lean/ConwaySoifer/Geometry/AcrossFacts.lean",
       "source_sha256": "50faf5ebe0db976816b72a3328ff3efd3e2a8755da279c9155010f335ab22f3e",
-      "sha256": "50faf5ebe0db976816b72a3328ff3efd3e2a8755da279c9155010f335ab22f3e",
-      "unchanged": true
+      "sha256": "c08e6164d3427b538216aebf42d1d2d4aa72d93c26bb495fbe52d8f11a4b38fa",
+      "unchanged": false
     },
     {
       "path": "ConwaySoifer/Geometry/AownFacts.lean",
       "source_path": "lean/ConwaySoifer/Geometry/AownFacts.lean",
       "source_sha256": "5eb6ad6c71975775dabdd9d6b203b0114ac225c847b1df105b4673da33c82b72",
-      "sha256": "5eb6ad6c71975775dabdd9d6b203b0114ac225c847b1df105b4673da33c82b72",
-      "unchanged": true
+      "sha256": "01b13f6541032e6f1b5d859aa2e48a5c6f37be22ddd396016796bf1ea6c35638",
+      "unchanged": false
     },
     {
       "path": "ConwaySoifer/Geometry/Area.lean",
@@ -187,7 +187,7 @@
       "path": "ConwaySoifer/Geometry/SideFacts.lean",
       "source_path": "lean/ConwaySoifer/Geometry/SideFacts.lean",
       "source_sha256": "9619369a837925767beb5646f40121488bd116e8065ea21c413c55f3e54e0176",
-      "sha256": "873bd0d1ab1c7340bd518161b2b8828f509f5b663e7cc1eace17ad271a451c73",
+      "sha256": "5fc71981caabdee4e36947c665caebd7544ec2b9bec3ddd6dc2268a6af2395b8",
       "unchanged": false
     },
     {

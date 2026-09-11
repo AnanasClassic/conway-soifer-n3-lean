@@ -1,0 +1,92 @@
+UTC start: 2026-09-11T06:47:02.844911+00:00
+Source SHA-256: 90445f36cf36eff39045c2c6c1cf6845a4fa9fc8532373af1f4f5c6b77a5e869
+Platform: Darwin-25.2.0-arm64-arm-64bit-Mach-O
+Logical CPUs: 14
+$ lake --version
+Lake version 5.0.0-src+797c613 (Lean version 4.24.0)
+Exit: 0; elapsed seconds: 0.045
+$ lake env lean --version
+Lean (version 4.24.0, arm64-apple-darwin23.6.0, commit 797c613eb9b6d4ec95db23e3e00af9ac6657f24b, Release)
+Exit: 0; elapsed seconds: 1.061
+$ python3 -m unittest discover -s tools -p test_build_kernel_checked.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.284s
+
+OK
+Exit: 0; elapsed seconds: 0.426
+$ python3 tools/build_kernel_checked.py --jobs 2
+Shard 1/1: 100 certificates
+✔ [3087/3099] Built ConwaySoifer.Certificates.IntPoly (5.4s)
+✔ [3088/3099] Built ConwaySoifer.Geometry.Basic (7.4s)
+✔ [3089/3099] Built ConwaySoifer.Certificates.Checker (2.2s)
+✔ [3090/3099] Built ConwaySoifer.Geometry.Diameter (2.0s)
+✔ [3091/3099] Built ConwaySoifer.Certificates.Model (2.0s)
+✔ [3092/3099] Built ConwaySoifer.Geometry.Rays (2.3s)
+✔ [3093/3099] Built ConwaySoifer.Geometry.Halfspaces (1.0s)
+✔ [3094/3099] Built ConwaySoifer.Geometry.TriangleHalfspaces (2.3s)
+✔ [3095/3099] Built ConwaySoifer.Geometry.Owners (2.4s)
+⚠ [3096/3099] Built ConwaySoifer.Geometry.Support (3.4s)
+warning: ConwaySoifer/Geometry/Support.lean:38:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:46:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:50:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:54:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:68:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:323:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:326:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:329:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:565:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3097/3099] Built ConwaySoifer.Certificates.CheckerSound (5.4s)
+warning: ConwaySoifer/Certificates/CheckerSound.lean:670:33: This simp argument is unused:
+  hord
+
+Hint: Omit it from the simp argument list.
+  simp [ordinaryCheck,̵ ̵h̵o̵r̵d̵] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [3098/3099] Built ConwaySoifer.Certificates.Witness (1.8s)
+✔ [3099/3099] Built ConwaySoifer.Certificates.KernelReplay (1.7s)
+Build completed successfully (3099 jobs).
+1/100 Sext_100000_110000: PASS (147.1s)
+2/100 Sext_110000_120000: PASS (215.5s)
+Exit: 130; elapsed seconds: 336.303
+{"child_system_seconds": 87.192311, "child_user_seconds": 562.805746, "elapsed_seconds": 337.83484687500004, "exit_code": 130, "finished_utc": "2026-09-11T06:52:41.185071+00:00", "max_child_rss_bytes": 4873224192, "platform": "Darwin-25.2.0-arm64-arm-64bit-Mach-O", "source_sha256": "90445f36cf36eff39045c2c6c1cf6845a4fa9fc8532373af1f4f5c6b77a5e869"}

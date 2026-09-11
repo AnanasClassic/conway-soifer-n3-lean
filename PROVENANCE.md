@@ -34,14 +34,17 @@ license remains to be selected by the rights holder.
 ## Extraction changes
 
 - The Lean project moved from `lean/` to the repository root. Dependency pins
-  are unchanged. Every retained original file is accounted for in
+  are unchanged. Every retained Lean file is accounted for in
   [docs/SOURCE_FILES.json](docs/SOURCE_FILES.json), with source and published hashes.
 - `Geometry/Normalization.lean` retains its geometric interfaces and proofs;
   the trailing compatibility wrappers for the old Boolean route and its import
   were removed. The retained proof bodies are unchanged.
 - `Geometry/ReceiverFacts.lean` extracts `reflL_apply`, `recvOf`, `recvOf_Sext` and
   `recvOf_Sint` verbatim from the former `Certificates/SmallS.lean`.
-  `Geometry/SideFacts.lean` imports the extracted module. The former `SmallS` and
+  `Geometry/SideFacts.lean` imports the extracted module. Unused `open Certificates`
+  commands were removed from `AownFacts`, `AcrossFacts` and `SideFacts` after the
+  obsolete namespace ceased to be imported. Their proof bodies are unchanged.
+  The former `SmallS` and
   `Analytic` modules and unused Boolean problems are not shipped.
 - `ConwaySoifer.lean` supplies public wrappers. `SimplifiedAudit.lean` now audits
   those wrappers, with the same exact axiom and certificate completeness checks.
@@ -54,3 +57,7 @@ license remains to be selected by the rights holder.
 The former 163-certificate collection, native-computation theorem, unused checks,
 research scripts/data, draft articles, local caches and original Git history are
 excluded. No mathematical assumption or geometric restriction was added.
+
+Historical source comments mentioning `proof/` or `drafts/` record the original
+research/export context. Those paths are not build inputs or reproduction steps
+in this package; the complete checked Lean data is already included.

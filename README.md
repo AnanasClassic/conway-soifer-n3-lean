@@ -50,7 +50,7 @@ Euclidean plane and do not restrict the class of triangles.
 
 ## Reproduce the check
 
-Install Git, curl, Python 3 (standard library only), and
+Install Git, curl, Python 3.9 or newer (standard library only), and
 [elan](https://github.com/leanprover/elan):
 
 ```sh
@@ -89,7 +89,12 @@ step modules and bounds concurrent certificates. Interrupted builds resume using
 Lake traces. `--jobs 2` permits two concurrent certificates when memory allows.
 `lake build` defaults to the public proof only, but can schedule many costly
 certificate modules concurrently. See [verification evidence](docs/VERIFICATION.md)
-for measured resources; those observations are not universal minimum requirements.
+for measured resources. The recorded macOS run used a 48 GiB, 14-logical-CPU
+machine, initially two then four concurrent certificates: 88.1 minutes by UTC
+timestamps, with a maximum recorded child-process RSS of 9.56 GiB. The final
+project build occupied about 1.8 GiB and dependencies about 6.1 GiB. These are
+observations, not universal minimum requirements; leave headroom for concurrent
+processes and the final audit.
 
 [CI](.github/workflows/lean.yml) runs on push, pull requests and manual dispatch.
 Ten partitions each build one certificate at a time. Only dependency caches are

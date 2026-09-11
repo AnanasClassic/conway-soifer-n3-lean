@@ -1,0 +1,167 @@
+$ lake build ConwaySoifer.Geometry.SideFacts
+⚠ [3092/3142] Replayed ConwaySoifer.Geometry.Support
+warning: ConwaySoifer/Geometry/Support.lean:38:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:42:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:46:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:50:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:54:32: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:68:39: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:72:43: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:76:53: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:80:48: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Support.lean:323:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:326:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:329:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Support.lean:565:33: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3123/3142] Replayed ConwaySoifer.Geometry.Area
+warning: ConwaySoifer/Geometry/Area.lean:226:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3127/3142] Replayed ConwaySoifer.Geometry.CornerCap
+warning: ConwaySoifer/Geometry/CornerCap.lean:23:41: unused variable `hp0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ConwaySoifer/Geometry/CornerCap.lean:23:55: unused variable `hpS`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ConwaySoifer/Geometry/CornerCap.lean:54:28: unused variable `hR0`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ConwaySoifer/Geometry/CornerCap.lean:247:35: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/CornerCap.lean:247:35: 'field_simp' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3128/3142] Replayed ConwaySoifer.Geometry.Symmetry
+warning: ConwaySoifer/Geometry/Symmetry.lean:94:41: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Symmetry.lean:94:41: 'norm_num' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Symmetry.lean:103:82: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/Symmetry.lean:103:82: 'norm_num' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [3131/3142] Replayed SevenTriangles.Geometry.Support
+warning: SevenTriangles/Geometry/Support.lean:167:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: SevenTriangles/Geometry/Support.lean:567:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:576:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:584:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:631:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:637:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:647:10: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: SevenTriangles/Geometry/Support.lean:560:15: This simp argument is unused:
+  e
+
+Hint: Omit it from the simp argument list.
+  simp [d, e̵,̵ ̵a, b, c]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: SevenTriangles/Geometry/Support.lean:560:21: This simp argument is unused:
+  b
+
+Hint: Omit it from the simp argument list.
+  simp [d, e, a, b̵,̵ ̵c]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3135/3142] Replayed ConwaySoifer.Geometry.Oblique
+warning: ConwaySoifer/Geometry/Oblique.lean:30:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Oblique.lean:34:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Oblique.lean:38:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3136/3142] Replayed ConwaySoifer.Geometry.Budget
+warning: ConwaySoifer/Geometry/Budget.lean:110:52: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3138/3142] Replayed ConwaySoifer.Geometry.Normalization
+warning: ConwaySoifer/Geometry/Normalization.lean:117:23: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/Normalization.lean:149:71: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/Normalization.lean:260:80: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✖ [3140/3142] Building ConwaySoifer.Geometry.AownFacts (7.3s)
+trace: .> LEAN_PATH=$CHECKOUT/.lake/packages/Cli/.lake/build/lib/lean:$CHECKOUT/.lake/packages/batteries/.lake/build/lib/lean:$CHECKOUT/.lake/packages/Qq/.lake/build/lib/lean:$CHECKOUT/.lake/packages/aesop/.lake/build/lib/lean:$CHECKOUT/.lake/packages/proofwidgets/.lake/build/lib/lean:$CHECKOUT/.lake/packages/importGraph/.lake/build/lib/lean:$CHECKOUT/.lake/packages/LeanSearchClient/.lake/build/lib/lean:$CHECKOUT/.lake/packages/plausible/.lake/build/lib/lean:$CHECKOUT/.lake/packages/mathlib/.lake/build/lib/lean:$CHECKOUT/.lake/build/lib/lean $ELAN_HOME/toolchains/leanprover--lean4---v4.24.0/bin/lean $CHECKOUT/ConwaySoifer/Geometry/AownFacts.lean -o $CHECKOUT/.lake/build/lib/lean/ConwaySoifer/Geometry/AownFacts.olean -i $CHECKOUT/.lake/build/lib/lean/ConwaySoifer/Geometry/AownFacts.ilean -c $CHECKOUT/.lake/build/ir/ConwaySoifer/Geometry/AownFacts.c --setup $CHECKOUT/.lake/build/ir/ConwaySoifer/Geometry/AownFacts.setup.json --json
+error: ConwaySoifer/Geometry/AownFacts.lean:17:5: unknown namespace `Certificates`
+warning: ConwaySoifer/Geometry/AownFacts.lean:27:76: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: ConwaySoifer/Geometry/AownFacts.lean:27:76: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: ConwaySoifer/Geometry/AownFacts.lean:31:69: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: ConwaySoifer/Geometry/AownFacts.lean:50:33: unused variable `hs`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: ConwaySoifer/Geometry/AownFacts.lean:101:61: 'ring' tactic does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+error: Lean exited with code 1
+Some required targets logged failures:
+- ConwaySoifer.Geometry.AownFacts
+error: build failed
+
+{"command": ["lake", "build", "ConwaySoifer.Geometry.SideFacts"], "exit_code": 1, "elapsed_seconds": 9.171053334000135, "finished_utc": "2026-09-11T07:08:59.134045+00:00"}

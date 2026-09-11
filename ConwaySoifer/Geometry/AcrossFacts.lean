@@ -16,7 +16,6 @@ set_option maxHeartbeats 800000
 noncomputable section
 open MeasureTheory
 namespace ConwaySoifer
-open Certificates
 
 /-! ### A generic wedge region at `v₀` -/
 
