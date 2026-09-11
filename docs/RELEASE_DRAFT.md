@@ -1,3 +1,7 @@
+> Historical preparation drafts. Version v1.0.0 was published on September 11, 2026:
+> https://doi.org/10.5281/zenodo.22712658. The current, unsent Zulip draft is in
+> [ZULIP_ANNOUNCEMENT.md](ZULIP_ANNOUNCEMENT.md).
+
 # Unpublished GitHub Release draft
 
 Title: The Conway–Soifer conjecture for n = 3: a Lean formalization

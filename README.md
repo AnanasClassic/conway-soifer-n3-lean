@@ -1,6 +1,7 @@
 # The Conway–Soifer conjecture for n = 3: a Lean formalization
 
 [![Lean formalization](https://github.com/AnanasClassic/conway-soifer-n3-lean/actions/workflows/lean.yml/badge.svg)](https://github.com/AnanasClassic/conway-soifer-n3-lean/actions/workflows/lean.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22712658.svg)](https://doi.org/10.5281/zenodo.22712658)
 
 This repository proves the **n = 3 case of the Conway–Soifer covering conjecture**
 with a standalone, kernel-checked Lean 4 formalization.
@@ -99,7 +100,9 @@ project build occupied about 1.8 GiB and dependencies about 6.1 GiB. These are
 observations, not universal minimum requirements; leave headroom for concurrent
 processes and the final audit.
 
-[CI](.github/workflows/lean.yml) runs on push, pull requests and manual dispatch.
+[CI](.github/workflows/lean.yml) runs for pushes and pull requests that change
+Lean sources, proof data, dependencies, build tools or the workflow itself.
+Documentation-only changes do not trigger a proof rebuild. Manual dispatch is available.
 Ten partitions each build one certificate at a time. Only dependency caches are
 reused across runs; project proofs are built from source. The final job assembles
 artifacts from the successful partitions of that run and executes the same builder
@@ -150,13 +153,16 @@ correctly captures an informal problem; readers are invited to inspect that matc
 No peer-reviewed article, independent mathematical review, or priority claim is
 asserted here. A research manuscript exists in the source project; no article is
 published with this package. Reproduction during packaging and automated CI are
-reported as such, not as independent review. Release, Zenodo and Lean Zulip texts
-are [unpublished drafts](docs/RELEASE_DRAFT.md).
+reported as such, not as independent review.
+
+Version [v1.0.0](https://github.com/AnanasClassic/conway-soifer-n3-lean/releases/tag/v1.0.0)
+was published on September 11, 2026 and archived on Zenodo:
+[10.5281/zenodo.22712658](https://doi.org/10.5281/zenodo.22712658).
+A [Lean Zulip announcement](docs/ZULIP_ANNOUNCEMENT.md) is prepared but not posted.
 
 Author: **Vladislav Kuznetsov**, Moscow Institute of Physics and Technology.
 
 The formalization and accompanying documentation are available under the
 [MIT License](LICENSE). See [provenance](PROVENANCE.md) for the source history,
 borrowed files and dependency licensing. Citation metadata is provided in
-[CITATION.cff](CITATION.cff); release-specific version, date and DOI will be added
-when assigned.
+[CITATION.cff](CITATION.cff), including the version, publication date and DOI.
