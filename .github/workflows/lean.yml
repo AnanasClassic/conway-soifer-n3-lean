@@ -1,7 +1,24 @@
 name: Lean formalization
 on:
   push:
+    branches: ['**']
+    paths:
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'tools/**'
+      - 'data/**'
+      - '.github/workflows/lean.yml'
   pull_request:
+    paths:
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'tools/**'
+      - 'data/**'
+      - '.github/workflows/lean.yml'
   workflow_dispatch:
 permissions:
   contents: read
