@@ -34,7 +34,7 @@ dependencies retain their own upstream licenses and are not vendored here.
 
 - The Lean project moved from `lean/` to the repository root. Dependency pins
   are unchanged. Every retained Lean file is accounted for in
-  [docs/SOURCE_FILES.json](docs/SOURCE_FILES.json), with source and published hashes.
+  [the extraction manifest archived with v1.0.0](https://github.com/AnanasClassic/conway-soifer-n3-lean/blob/v1.0.0/docs/SOURCE_FILES.json), with source and published hashes.
 - `Geometry/Normalization.lean` retains its geometric interfaces and proofs;
   the trailing compatibility wrappers for the old Boolean route and its import
   were removed. The retained proof bodies are unchanged.

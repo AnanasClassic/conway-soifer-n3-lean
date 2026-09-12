@@ -7,4 +7,5 @@ Their SHA-256 sums are listed in `VENDORED_SHA256.txt`.  They use the oblique
 coordinates `(x,z) ↦ (x, √3 z/2)`; the bridge to the triangular coordinates of
 `ConwaySoifer` is proved in `ConwaySoifer/Geometry/Oblique.lean`.
 
-The upstream repository has no license file at the recorded revision. No new license is assigned here. See `../PROVENANCE.md`.
+These files are distributed under this package's [MIT License](../LICENSE).
+See [provenance](../PROVENANCE.md) for their source history and licensing.

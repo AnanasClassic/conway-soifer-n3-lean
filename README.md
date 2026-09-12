@@ -158,7 +158,6 @@ reported as such, not as independent review.
 Version [v1.0.0](https://github.com/AnanasClassic/conway-soifer-n3-lean/releases/tag/v1.0.0)
 was published on September 11, 2026 and archived on Zenodo:
 [10.5281/zenodo.22712658](https://doi.org/10.5281/zenodo.22712658).
-A [Lean Zulip announcement](docs/ZULIP_ANNOUNCEMENT.md) is prepared but not posted.
 
 Author: **Vladislav Kuznetsov**, Moscow Institute of Physics and Technology.
 
