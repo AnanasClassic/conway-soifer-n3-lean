@@ -29,6 +29,5 @@ keywords:
   - equilateral triangles
   - Conway–Soifer conjecture
 license: MIT
-version: 1.0.0
-doi: 10.5281/zenodo.22712658
-date-released: 2026-09-11
+version: 1.0.1
+date-released: 2026-09-12
