@@ -1,5 +1,13 @@
 # Verification
 
+## Current source
+
+The Palomar preparation uses Lean 4.28.0 and the corresponding Mathlib release.
+Check the exact commit's **Lean formalization** and **Palomar mechanical
+verification** workflows. The latter performs a fresh official Comparator and
+NanoDa check; historical release success below does not establish its result.
+See [the Comparator and submission guide](PALOMAR.md).
+
 ## Published release
 
 Release [v1.0.0](https://github.com/AnanasClassic/conway-soifer-n3-lean/releases/tag/v1.0.0)

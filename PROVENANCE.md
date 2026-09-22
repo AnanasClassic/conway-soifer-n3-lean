@@ -32,8 +32,8 @@ dependencies retain their own upstream licenses and are not vendored here.
 
 ## Extraction changes
 
-- The Lean project moved from `lean/` to the repository root. Dependency pins
-  are unchanged. Every retained Lean file is accounted for in
+- The Lean project moved from `lean/` to the repository root. At extraction,
+  dependency pins were unchanged. Every retained Lean file is accounted for in
   [the extraction manifest archived with v1.0.0](https://github.com/AnanasClassic/conway-soifer-n3-lean/blob/v1.0.0/docs/SOURCE_FILES.json), with source and published hashes.
 - `Geometry/Normalization.lean` retains its geometric interfaces and proofs;
   the trailing compatibility wrappers for the old Boolean route and its import
@@ -60,3 +60,16 @@ excluded. No mathematical assumption or geometric restriction was added.
 Historical source comments mentioning `proof/` or `drafts/` record the original
 research/export context. Those paths are not build inputs or reproduction steps
 in this package; the complete checked Lean data is already included.
+
+## Comparator and Palomar preparation
+
+The later Palomar preparation updates Lean from 4.24.0 to 4.28.0 and Mathlib
+to its matching release commit, with the matching transitive dependency pins.
+`Challenge.lean` independently restates the definitions and public theorem
+signatures; its two proof placeholders are excluded from the proved module.
+The Comparator configuration compares these with `ConwaySoifer.lean`.
+The added `formalization.yaml` records the role of Codex in the mathematical
+and formal proof development as well as packaging; the earlier packaging
+description above is not intended to imply that AI assistance was limited to
+documentation. New verification results belong to their exact CI commits,
+not to the historical release's evidence.

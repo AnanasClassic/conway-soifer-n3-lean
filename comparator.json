@@ -1,0 +1,10 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "ConwaySoifer",
+  "theorem_names": [
+    "ConwaySoifer.ten_triangle_cover_lower_bound",
+    "ConwaySoifer.no_ten_unit_triangle_cover"
+  ],
+  "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "enable_nanoda": true
+}
