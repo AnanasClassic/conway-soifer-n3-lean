@@ -1,0 +1,45 @@
+name: Palomar mechanical verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'formalization.yaml'
+      - 'comparator.json'
+      - 'LICENSE'
+      - '.github/workflows/palomar.yml'
+  pull_request:
+    paths:
+      - '**/*.lean'
+      - 'lean-toolchain'
+      - 'lakefile.toml'
+      - 'lake-manifest.json'
+      - 'formalization.yaml'
+      - 'comparator.json'
+      - 'LICENSE'
+      - '.github/workflows/palomar.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palomar-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    # Use the actual source commit, not GitHub's synthetic PR merge commit:
+    # this is also the SHA to submit to Palomar after verification.
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@a09f5c38ee58bf92c459b974b174ff4063ebea5f
+    with:
+      repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+      commit: ${{ github.event.pull_request.head.sha || github.sha }}
+      pipeline_commit: a09f5c38ee58bf92c459b974b174ff4063ebea5f
+      request_id: cs3-${{ github.run_id }}-${{ github.run_attempt }}
+      mode: full
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"I am a responsible author or maintainer"}'

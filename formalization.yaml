@@ -1,0 +1,155 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: v0.4
+
+project:
+  name: "The Conway–Soifer conjecture for n = 3: a Lean formalization"
+  description: >-
+    For every positive epsilon, a closed equilateral triangle of side
+    3 + epsilon cannot be covered by ten closed unit equilateral triangles,
+    with arbitrary positions, rotations and overlaps. Equivalently, ten
+    congruent equilateral triangles covering an equilateral triangle of side
+    three must have common side at least one. The computer-assisted proof
+    uses 100 finite certificates and 3188 forced point-to-owner assignments.
+    Only the n = 3 case is claimed.
+  authors:
+    - Vladislav Kuznetsov
+  responsible_maintainers:
+    - Vladislav Kuznetsov (GitHub AnanasClassic)
+  license: MIT
+
+sources:
+  - title: "Computer-assisted proof of the Conway–Soifer covering conjecture for n = 3"
+    authors:
+      - Vladislav Kuznetsov
+    id: https://doi.org/10.5281/zenodo.22712658
+    type: original-proof
+    relationship: other
+    author_endorsement: participated
+    note: >-
+      The repository contains the substantive proof development, extracted
+      from the author's research repository. The DOI identifies its original
+      public v1.0.0 snapshot. This is an original proof development with Codex
+      assistance; this classification makes no priority or peer-review claim.
+      See PROVENANCE.md for the precise extraction history.
+  - title: >-
+      An Equilateral Triangle of Side > n Cannot be Covered by n² + 1 Unit
+      Equilateral Triangles Homothetic to it
+    authors:
+      - Jineon Baek
+      - Seewoo Lee
+    id: https://doi.org/10.1080/00029890.2024.2416882
+    type: article
+    location: "Conjecture 2; The American Mathematical Monthly 132(2), 2025, pp. 113–121"
+    relationship: background
+    author_endorsement: not-contacted
+    note: >-
+      Conjecture 2 states the unrestricted covering problem attributed to
+      Conway and Soifer. The article proves a result with a homothety
+      restriction for general n. This repository treats n = 3 with arbitrary
+      rotations and does not formalize that article's proof.
+
+related_formalizations:
+  - id: https://github.com/AnanasClassic/conway_soifer_n3/tree/572758392604d12bf1a08eb623a58c8e45f337cb
+    relationship: builds-on
+    note: >-
+      Source research development, not required to reproduce this repository;
+      access may be restricted. See PROVENANCE.md.
+  - id: https://github.com/AnanasClassic/seven_triangles_unit_hexagon/tree/b17ca52a395519f43fc15f83fb49a5dd69996225
+    relationship: builds-on
+    note: >-
+      Five geometry modules were vendored from the author's earlier project.
+      Their provenance and content hashes are recorded in this repository.
+
+classification:
+  arxiv:
+    - math.MG
+    - math.CO
+  msc2020:
+    - 52C15
+
+status:
+  scope: >-
+    The n = 3 covering lower bound and its scaled unit-triangle formulation.
+    No result for general n or an eleven-triangle construction is claimed.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+  main_results:
+    - declaration: ConwaySoifer.ten_triangle_cover_lower_bound
+      file: ConwaySoifer.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+    - declaration: ConwaySoifer.no_ten_unit_triangle_cover
+      file: ConwaySoifer.lean
+      sorry_count: 0
+      axioms: [propext, Classical.choice, Quot.sound]
+      comparator_config: comparator.json
+      literature_dependencies: []
+
+automation:
+  methods:
+    - method: agent
+      framework: OpenAI Codex
+      tool_setup: >-
+        Agent-assisted mathematical development, Lean proof development,
+        debugging, repository preparation and verification tooling, under
+        the author's direction. Python proposed finite certificates and
+        checkpoint data; Lean checks their sufficiency and soundness.
+      prompting_notes: >-
+        The author requested a proof of the unrestricted n = 3 covering
+        problem, a full Lean formalization, simplification, kernel checking,
+        and a standalone reproducible public package.
+  notes: >-
+    Exact historical model identifiers, token counts and aggregate costs
+    were not recorded in the public source history and are not inferred here.
+    Concrete certificate checks use decide +kernel, not native_decide.
+    Search software is not part of the proof's trusted inputs.
+
+fidelity:
+  divergences: >-
+    The target is fixed in triangular coordinates (a,b) representing the
+    Euclidean point (a+b/2, sqrt(3)*b/2); the squared distance is
+    da^2 + da*db + db^2. This invertible linear presentation preserves convex
+    hulls. The closed target's vertices are (1,1), (-2,1), (1,-2), with side
+    three. Fixing its position does not restrict the isometry-invariant
+    covering question. Covering triangles are convex hulls of equidistant
+    vertices, with unrestricted positions, rotations and overlaps; even
+    zero-side degeneracies are admitted. The scaled theorem covers every
+    positive epsilon. The two explicit Euclidean coordinate/isometry
+    interpretations are explained informally rather than exposed as
+    separately compared Lean equivalence theorems.
+
+review:
+  status: agent-reviewed
+  notes: >-
+    Development and packaging received automated checks and agent review.
+    No independent mathematical review or peer review is claimed. The
+    published v1.0.0 passed the recorded Lean 4.24 build and axiom audit;
+    that historical result is not evidence that a later port or Comparator
+    run passed. Consult CI for the exact commit under consideration.
+    The two deliberate sorry placeholders in Challenge.lean are excluded
+    from status.sorry_count and are never imported by the proof module.
+    A Palomar mechanical preflight does not constitute registry publication
+    or editorial review.
+
+alignment:
+  namespace: ConwaySoifer
+  statements:
+    - source: "Conjecture 2, restricted to n = 3"
+      lean: ConwaySoifer.no_ten_unit_triangle_cover
+      module: ConwaySoifer.lean
+      status: proved
+      note: "Every positive epsilon; ten unit triangles with arbitrary rotations."
+    - source: "Equivalent normalized side-length lower bound"
+      lean: ConwaySoifer.ten_triangle_cover_lower_bound
+      module: ConwaySoifer.lean
+      status: proved
+      note: "Every common side r; a cover of the whole closed side-three target."
+
+acknowledgements: >-
+  The author is affiliated with the Moscow Institute of Physics and Technology.
+  The development uses Lean and mathlib. Michael Rothgang suggested Comparator,
+  formalization.yaml and Palomar on Lean Zulip; this is not an endorsement or
+  a claim that he reviewed the proof.

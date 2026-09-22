@@ -66,8 +66,8 @@ lake exe cache get
 python3 tools/verify.py --jobs 1
 ```
 
-The toolchain is **Lean v4.24.0**. Mathlib is pinned to
-**f897ebcf72cd16f89ab4577d0c826cd14afaafc7**. The committed
+The toolchain is **Lean v4.28.0**. Mathlib is pinned to
+**8f9d9cff6bd728b17a24e163c9402775d9e6a365**. The committed
 [toolchain](lean-toolchain), [Lake configuration](lakefile.toml), and
 [manifest](lake-manifest.json) fix the transitive dependencies. Do not run
 `lake update` to reproduce this version. `lake exe cache get` downloads the
@@ -107,6 +107,28 @@ Ten partitions each build one certificate at a time. Only dependency caches are
 reused across runs; project proofs are built from source. The final job assembles
 artifacts from the successful partitions of that run and executes the same builder
 and audits. Shard success alone is not a successful theorem audit.
+
+## Independent statement and Comparator
+
+[Challenge.lean](Challenge.lean) states both public claims and all their
+geometric definitions in a small file importing only Mathlib. Its two deliberate
+`sorry` placeholders are specifications, not part of the proof. Do not import
+`Challenge` together with `ConwaySoifer`: these are separate environments with
+the same declaration names, which Comparator compares.
+
+[comparator.json](comparator.json) selects the two public theorems in
+`ConwaySoifer.lean`. The [Palomar workflow](.github/workflows/palomar.yml) calls
+the official verifier at a pinned revision. It rebuilds from a fresh checkout,
+compares the statement with the solution, enforces the three permitted axioms,
+and rechecks the exported proof with both Lean's kernel and NanoDa.
+It also checks [formalization.yaml](formalization.yaml), dependency provenance
+and the Challenge's import closure. Read the complete workflow result and its
+mechanical report; a successful Lean build alone is not a Comparator result.
+
+This workflow is a mechanical preflight, not a Palomar submission or a review
+by a human mathematician. See [the verification and submission guide](docs/PALOMAR.md)
+for reproduction and registration. The v1.0.x release evidence uses Lean 4.24;
+the current port must be assessed from its own CI results.
 
 ## Proof outline and trust boundary
 

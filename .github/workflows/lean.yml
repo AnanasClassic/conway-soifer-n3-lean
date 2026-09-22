@@ -1,7 +1,7 @@
 name: Lean formalization
 on:
   push:
-    branches: ['main', 'codex/palomar-comparator']
+    branches: [main]
     paths:
       - '**/*.lean'
       - 'lean-toolchain'
