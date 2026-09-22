@@ -1,7 +1,7 @@
 name: Lean formalization
 on:
   push:
-    branches: ['**']
+    branches: ['main', 'codex/palomar-comparator']
     paths:
       - '**/*.lean'
       - 'lean-toolchain'
@@ -26,8 +26,30 @@ concurrency:
   group: lean-${{ github.ref }}
   cancel-in-progress: true
 jobs:
+  preflight:
+    name: Check statement and proof infrastructure
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install toolchain manager
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan/toolchains
+            ~/.cache/mathlib
+            .lake/packages
+          key: cs3-public-deps-${{ runner.os }}-${{ hashFiles('lake-manifest.json', 'lean-toolchain') }}
+      - name: Download pinned mathlib cache
+        run: lake exe cache get
+      - name: Check independent statement and certificate infrastructure
+        run: lake build Challenge ConwaySoifer.Certificates.KernelReplay
   certificates:
     name: Certificates ${{ matrix.shard }} / 10
+    needs: preflight
     runs-on: ubuntu-24.04
     timeout-minutes: 350
     strategy:
